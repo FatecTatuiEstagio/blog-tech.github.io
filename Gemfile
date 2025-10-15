@@ -26,10 +26,11 @@ end
 # Logger gem para Ruby 3.5+ compatibility
 gem "logger", "~> 1.6"
 
-# Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem
-# and associated library.
+# Cross-platform compatibility
+gem "tzinfo", ">= 1", "< 3"
+
+# Windows-specific gems
 platforms :windows, :jruby do
-  gem "tzinfo", ">= 1", "< 3"
   gem "tzinfo-data"
 end
 
