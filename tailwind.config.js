@@ -2,12 +2,12 @@
 module.exports = {
   content: [
     "./_includes/**/*.html",
-    "./_layouts/**/*.html",
-    "./_posts/**/*.{html,md}",
-    "./_site/**/*.html",
+    "./_layouts/**/*.html", 
+    "./_posts/**/*.{html,md,markdown}",
     "./index.html",
+    "./index.markdown",
     "./about.markdown",
-    "./**/*.html"
+    "./*.html"
   ],
   theme: {
     extend: {
