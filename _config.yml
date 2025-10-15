@@ -24,7 +24,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   Um projeto de parceria com a Fatec e Rádio Notícias de Tatuí que traz entrevistas com os principais 
   temas de tecnologia, inovação e transformação digital.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://blog-tech.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Build settings
 plugins:
