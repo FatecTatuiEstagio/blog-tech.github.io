@@ -1,0 +1,64 @@
+{  
+  // Configurações para Liquid templating no Jekyll
+  "liquid.engine": "jekyll",
+  "liquid.config.baseDir": "./",
+  
+  // Associações de arquivos para Liquid
+  "files.associations": {
+    "*.html": "liquid",
+    "*.liquid": "liquid",
+    "*.jekyll": "liquid",
+    "*.md": "markdown",
+    "*.markdown": "markdown"
+  },
+  
+  // Formatação automática
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "sissel.shopify-liquid",
+  "[liquid]": {
+    "editor.defaultFormatter": "sissel.shopify-liquid",
+    "editor.quickSuggestions": {
+      "other": true,
+      "comments": false,
+      "strings": true
+    },
+    "editor.suggest.insertMode": "replace"
+  },
+  
+  // Configurações para HTML com Liquid
+  "[html]": {
+    "editor.defaultFormatter": "sissel.shopify-liquid",
+    "editor.quickSuggestions": {
+      "other": true,
+      "comments": false,
+      "strings": true
+    }
+  },
+  
+  // Configurações para Markdown
+  "[markdown]": {
+    "editor.wordWrap": "on",
+    "editor.quickSuggestions": {
+      "comments": "off",
+      "strings": "off",
+      "other": "off"
+    }
+  },
+  
+  // Explorador de arquivos
+  "files.exclude": {
+    "_site/**": true,
+    ".sass-cache/**": true,
+    ".jekyll-cache/**": true,
+    ".jekyll-metadata": true,
+    "vendor/**": true
+  },
+  
+  // Configurações de busca
+  "search.exclude": {
+    "_site/**": true,
+    ".sass-cache/**": true,
+    ".jekyll-cache/**": true,
+    "vendor/**": true
+  }
+}
