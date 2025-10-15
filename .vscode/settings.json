@@ -12,9 +12,35 @@
     "*.markdown": "markdown"
   },
   
+  // Configurações do Tailwind CSS
+  "tailwindCSS.includeLanguages": {
+    "liquid": "html",
+    "html": "html",
+    "markdown": "html"
+  },
+  "tailwindCSS.files.exclude": [
+    "**/.git/**",
+    "**/node_modules/**",
+    "**/_site/**",
+    "**/.sass-cache/**",
+    "**/.jekyll-cache/**"
+  ],
+  "tailwindCSS.classAttributes": [
+    "class",
+  ],
+  "tailwindCSS.experimental.classRegex": [
+    ["class:\\s*?[\"'`]([^\"'`]*).*?[\"'`]", "[\"'`]([^\"'`]*)[\"'`]"]
+  ],
+  
   // Formatação automática
   "editor.formatOnSave": true,
   "editor.defaultFormatter": "sissel.shopify-liquid",
+  
+  // Configurações para CSS
+  "css.validate": true,
+  "css.lint.unknownAtRules": "ignore",
+  "scss.validate": true,
+  "scss.lint.unknownAtRules": "ignore",
   "[liquid]": {
     "editor.defaultFormatter": "sissel.shopify-liquid",
     "editor.quickSuggestions": {
@@ -60,5 +86,5 @@
     ".sass-cache/**": true,
     ".jekyll-cache/**": true,
     "vendor/**": true
-  }
+  },
 }
