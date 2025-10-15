@@ -1,16 +1,14 @@
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: "pt-br" }}">
+<html lang="{{ page.lang | default: site.lang | default: "pt-br" }}" class="scroll-smooth">
 
   {%- include head.html -%}
 
-  <body>
+  <body class="bg-white text-gray-900 font-sans antialiased">
 
     {%- include header.html -%}
 
-    <main class="page-content" aria-label="Content">
-      <div class="wrapper">
-        {{ content }}
-      </div>
+    <main class="min-h-screen" aria-label="Content">
+      {{ content }}
     </main>
 
     {%- include footer.html -%}
