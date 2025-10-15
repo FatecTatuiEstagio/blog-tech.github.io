@@ -1,0 +1,9 @@
+{
+  "recommendations": [
+    "sissel.shopify-liquid",
+    "ginfuru.ginfuru-vscode-jekyll-syntax",
+    "ginfuru.vscode-jekyll-snippets",
+    "yzhang.markdown-all-in-one",
+    "davidanson.vscode-markdownlint"
+  ]
+}

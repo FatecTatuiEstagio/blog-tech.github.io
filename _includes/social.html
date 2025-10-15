@@ -1,0 +1,13 @@
+{%- assign social = site.minima.social_links -%}
+
+<ul class="social-media-list">
+  {%- if social.github -%}<li><a href="https://github.com/{{ social.github | cgi_escape | escape }}"><svg class="svg-icon"><use xlink:href="{{ '/assets/minima-social-icons.svg#github' | relative_url }}"></use></svg> <span class="username">{{ social.github }}</span></a></li>{%- endif -%}
+  {%- if social.twitter -%}<li><a href="https://www.twitter.com/{{ social.twitter | cgi_escape | escape }}"><svg class="svg-icon"><use xlink:href="{{ '/assets/minima-social-icons.svg#twitter' | relative_url }}"></use></svg> <span class="username">{{ social.twitter }}</span></a></li>{%- endif -%}
+  {%- if social.linkedin -%}<li><a href="https://www.linkedin.com/in/{{ social.linkedin | cgi_escape | escape }}"><svg class="svg-icon"><use xlink:href="{{ '/assets/minima-social-icons.svg#linkedin' | relative_url }}"></use></svg> <span class="username">{{ social.linkedin }}</span></a></li>{%- endif -%}
+  {%- for platform in social -%}
+    {%- if platform.first == "github" or platform.first == "twitter" or platform.first == "linkedin" -%}
+      {%- continue -%}
+    {%- endif -%}
+    <li><a href="{{ platform.last }}">{{ platform.first }}</a></li>
+  {%- endfor -%}
+</ul>
