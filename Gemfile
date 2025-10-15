@@ -18,6 +18,11 @@ group :jekyll_plugins do
   gem "jekyll-seo-tag", "~> 2.8"
 end
 
+# Testing and development gems
+group :test do
+  gem "html-proofer", "~> 5.0"
+end
+
 # Logger gem para Ruby 3.5+ compatibility
 gem "logger", "~> 1.6"
 
