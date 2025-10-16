@@ -4,7 +4,7 @@ title: "Isenção de Taxa de Inscrição no Vestibular da Fatec Tatuí"
 date: 2025-09-04
 categories: ["Fatec Tatuí", "Vestibular", "Isenção"]
 author: "Redação Tech Blog"
-# excerpt: "Quer estudar na Fatec Tatuí sem pagar taxa de inscrição? Agora é possível! Saiba como solicitar isenção ou redução da taxa do vestibular 2026."
+image: "/assets/image/post/2025/9/04.jpg"
 ---
 
 Quer estudar na Fatec Tatuí sem pagar taxa de inscrição? Agora é possível! Na Fatec Tatuí, o ensino tecnológico de qualidade anda de mãos dadas com a oportunidade. Em entrevista à Rádio Notícias, o diretor acadêmico professor Jefferson Nedelso explicou todos os detalhes sobre o vestibular do 1º semestre de 2026 e destacou o processo de isenção e redução da taxa de inscrição, um benefício que amplia o acesso ao ensino superior.
