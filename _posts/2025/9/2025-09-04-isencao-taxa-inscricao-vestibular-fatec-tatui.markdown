@@ -4,6 +4,7 @@ title: "Isenção de Taxa de Inscrição no Vestibular da Fatec Tatuí"
 date: 2025-09-04
 categories: ["Fatec Tatuí", "Vestibular", "Isenção"]
 author: "Redação Tech Blog"
+guest: "Jefferson Nedelciu"
 image: "/assets/image/post/2025/9/04.jpg"
 ---
 
