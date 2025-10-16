@@ -37,7 +37,6 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '22.x'
-          cache: 'npm'
       - name: Install Node.js dependencies
         run: npm i
       - name: Build Tailwind CSS
