@@ -4,31 +4,44 @@ layout: default
 
 <div class="home">
   {%- if page.title -%}
-    <h1 class="page-heading">{{ page.title }}</h1>
+    <div class="container-custom mb-8">
+      <h1 class="text-4xl font-bold text-gradient mb-4">{{ page.title }}</h1>
+    </div>
   {%- endif -%}
 
-  {{ content }}
+  <div class="container-custom">
+    {{ content }}
+  </div>
 
   {%- if site.posts.size > 0 -%}
-    <h2 class="post-list-heading">{{ page.list_title | default: "Posts" }}</h2>
-    <ul class="post-list">
-      {%- for post in site.posts -%}
-      <li>
-        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-        <span class="post-meta">{{ post.date | date: date_format }}</span>
-        <h3>
-          <a class="post-link" href="{{ post.url | relative_url }}">
-            {{ post.title | escape }}
-          </a>
-        </h3>
-        {%- if site.show_excerpts -%}
-          {{ post.excerpt }}
+    <section class="py-12 bg-gray-50">
+      <div class="container-custom">
+        <h2 class="text-3xl font-bold text-dark mb-8 text-center">
+          {{ page.list_title | default: "Últimos Posts" }}
+        </h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {%- for post in site.posts limit:6 -%}
+            {% include post-card.html %}
+          {%- endfor -%}
+        </div>
+        
+        {%- if site.posts.size > 6 -%}
+          <div class="text-center mt-12">
+            <a href="/blog" class="btn btn-primary">
+              Ver todos os posts
+            </a>
+          </div>
         {%- endif -%}
-      </li>
-      {%- endfor -%}
-    </ul>
+      </div>
+    </section>
 
-    <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
+    <div class="container-custom py-8">
+      <p class="text-center text-gray-600">
+        📡 Assine nosso <a href="{{ "/feed.xml" | relative_url }}" class="text-primary hover:underline">RSS Feed</a> 
+        para ficar sempre atualizado!
+      </p>
+    </div>
   {%- endif -%}
 
 </div>
