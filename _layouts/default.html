@@ -6,8 +6,12 @@
   <body class="bg-white text-gray-900 font-sans antialiased">
 
     {%- include navbar.html -%}
+    {%- include search-results.html -%}
 
-    <main class="min-h-screen" aria-label="Content">
+    <main
+      id="main-content"
+      class="min-h-screen"
+      aria-label="Content">
       {{ content }}
     </main>
 
