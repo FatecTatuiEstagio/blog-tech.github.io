@@ -1,0 +1,11 @@
+{% comment %} 
+  Remove the line numbers from a code snippet 
+{% endcomment %}
+
+{% assign content = include.content
+ | replace: '<div class="highlight">', '<div>'
+ | replace: '<pre class="linenos">', '<pre>'
+ | replace: '<table class="rouge-table">', '<table>'
+ | replace: '<td class="rouge-gutter gl">', '<td>'
+ | replace: '<td class="rouge-code">', '<td>'
+%}
