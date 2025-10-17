@@ -26,9 +26,6 @@ assets/css/tailwind.css
 _sass/vendors
 assets/js/dist
 
-# Data gerada automaticamente
-_data/cloudinary-urls.json
-
 # Arquivos de ambiente
 .env
 .env.local

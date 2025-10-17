@@ -6,7 +6,7 @@
     "dev": "concurrently \"tailwindcss -i ./assets/css/tailwind-input.css -o ./assets/css/tailwind.css --watch\" \"bundle exec jekyll serve\"",
     "build": "tailwindcss -i ./assets/css/tailwind-input.css -o ./assets/css/tailwind.css --minify",
     "build-css": "tailwindcss -i ./assets/css/tailwind-input.css -o ./assets/css/tailwind.css --watch",
-    "upload-audios": "node scripts/upload-audios.js"
+    "upload": "node scripts/upload-audios.js"
   },
   "devDependencies": {
     "@tailwindcss/forms": "^0.5.7",
