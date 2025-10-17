@@ -1,37 +1,35 @@
 <header class="bg-[#072446] border-b border-gray-700" role="banner">
   <nav class="container mx-auto px-4">
-    <div class="flex items-center justify-between h-16">
-      <!-- Logo e Título -->
-      <div class="flex items-center gap-4">
-        <div class="flex items-center gap-3">
-          <a href="https://www.radionoticias.com.br/" target="_blank">
-            <img
-              src="{{ '/assets/image/radio.png' | relative_url }}"
-              alt="Rádio Notícias"
-              class="h-10 w-auto">
-          </a>
-          <a href="https://www.fatectatui.edu.br/site4/index.php" target="_blank">
-            <img
-              src="{{ '/assets/image/fatec.png' | relative_url }}"
-              alt="Fatec Tatuí"
-              class="h-10 w-auto">
-          </a>
-          <a href="https://www.cps.sp.gov.br/" target="_blank">
-            <img
-              src="{{ '/assets/image/cps.png' | relative_url }}"
-              alt="CPS"
-              class="h-10 w-auto">
-          </a>
-
-        </div>
-
-        <h1 class="text-white text-center items-center text-xl font-light ml-4 hidden lg:block">
-          <a href="{{ '/' | relative_url }}">
-            Blog
-            <span class="font-semibold">Mundo Tecnológico</span>
-          </a>
-        </h1>
+    <div class="flex items-center justify-between h-16 relative">
+      <!-- Logo -->
+      <div class="flex items-center gap-3">
+        <a href="https://www.radionoticias.com.br/" target="_blank">
+          <img
+            src="{{ '/assets/image/radio.png' | relative_url }}"
+            alt="Rádio Notícias"
+            class="h-10 w-auto">
+        </a>
+        <a href="https://www.fatectatui.edu.br/site4/index.php" target="_blank">
+          <img
+            src="{{ '/assets/image/fatec.png' | relative_url }}"
+            alt="Fatec Tatuí"
+            class="h-10 w-auto">
+        </a>
+        <a href="https://www.cps.sp.gov.br/" target="_blank">
+          <img
+            src="{{ '/assets/image/cps.png' | relative_url }}"
+            alt="CPS"
+            class="h-10 w-auto">
+        </a>
       </div>
+
+      <!-- Título Centralizado -->
+      <h1 class="text-white text-xl font-light absolute left-1/2 transform -translate-x-1/2 hidden lg:block">
+        <a href="{{ '/' | relative_url }}">
+          Blog
+          <span class="font-semibold bg-gradient-to-r from-[#71c3ec] to-[#fbfcfd] bg-clip-text text-transparent">Mundo Tecnológico</span>
+        </a>
+      </h1>
 
       <!-- Ícone de Busca -->
       <div class="flex items-center">

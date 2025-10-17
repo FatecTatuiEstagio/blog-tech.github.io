@@ -3,9 +3,9 @@ layout: default
 ---
 
 <div class="home">
-  
+
   {%- include hero.html -%}
-  
+
   <div class="container-custom">
     {{ content }}
   </div>
@@ -13,16 +13,19 @@ layout: default
   {%- if site.posts.size > 0 -%}
     <section class="py-12 bg-[#072446]">
       <div class="container-custom">
-        <h2 class="text-3xl font-bold text-gray-200 mb-8 text-center">
-          {{ page.list_title | default: "Últimos Posts" }}
-        </h2>
-        
+        <div class="flex items-start">
+          <h2 class="text-3xl font-bold text-[#71c3ec] mb-8 text-center">
+            {{ page.list_title | default: "Entrevistas Recentes" }}
+          </h2>
+        </div>
+
+
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {%- for post in site.posts limit:6 -%}
+          {%- for post in site.posts limit: 6 -%}
             {% include post-card.html %}
           {%- endfor -%}
         </div>
-        
+
         {%- if site.posts.size > 6 -%}
           <div class="text-center mt-12">
             <a href="/blog" class="btn btn-primary">
