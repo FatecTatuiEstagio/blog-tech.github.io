@@ -90,6 +90,32 @@ bundle exec jekyll serve
 
 O site estará disponível em `http://localhost:4000`
 
+## 📦 Integração com Cloudinary
+
+Este projeto utiliza Cloudinary para hospedar arquivos de áudio dos posts.
+
+**Documentação completa**: [docs/cloudinary.md](docs/cloudinary.md)
+
+**Guia rápido**: [docs/GUIA-RAPIDO-AUDIO.md](docs/GUIA-RAPIDO-AUDIO.md)
+
+### Como Adicionar um Novo Áudio
+
+```bash
+# 1. Renomeie o arquivo para o padrão YYYY-MM-DD.mp3
+cp seu-audio.mp3 assets/audio/posts/2025-10-17.mp3
+
+# 2. Adicione ao Git (usando Git LFS)
+git add assets/audio/posts/2025-10-17.mp3
+
+# 3. Commit e push
+git commit -m "Adiciona áudio: 2025-10-17"
+git push
+```
+
+O GitHub Actions automaticamente fará o upload para o Cloudinary durante o deploy.
+
+## 🔧 Tecnologias
+
 ## 🛠️ Tecnologias Utilizadas
 
 - **Jekyll** - Gerador de sites estáticos

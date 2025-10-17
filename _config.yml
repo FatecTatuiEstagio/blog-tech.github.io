@@ -46,3 +46,9 @@ exclude:
   - .github/
   - README.md
   - LICENSE
+  - package.json
+  - package-lock.json
+  - tailwind.config.js
+  - assets/audio/
+  - scripts/
+  - docs/
