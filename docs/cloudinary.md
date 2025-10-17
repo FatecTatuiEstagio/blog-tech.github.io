@@ -679,13 +679,13 @@ npm run upload-audios
 
 ## 🎯 Checklist de Implementação
 
-- [ ] **Instalar Git LFS** (`git lfs install`)
-- [ ] **Configurar Git LFS** para rastrear áudios (`git lfs track "assets/audio/posts/*.mp3"`)
-- [ ] Adicionar exclusões no `_config.yml` (áudios, scripts, docs)
-- [ ] Instalar dependência `cloudinary`
-- [ ] Criar script `scripts/upload-audios.js`
-- [ ] Adicionar `CLOUDINARY_URL` nos GitHub Secrets
-- [ ] Criar diretório `assets/audio/posts/`
+- [x] **Instalar Git LFS** (`git lfs install`)
+- [x] **Configurar Git LFS** para rastrear áudios (`git lfs track "assets/audio/posts/*.mp3"`)
+- [x] Adicionar exclusões no `_config.yml` (áudios, scripts, docs)
+- [x] Instalar dependência `cloudinary`
+- [x] Criar script `scripts/upload-audios.js`
+- [x] Adicionar `CLOUDINARY_URL` nos GitHub Secrets
+- [x] Criar diretório `assets/audio/posts/`
 - [ ] Atualizar/criar `.github/workflows/deploy.yml`
 - [ ] Criar include `_includes/audio-player.html`
 - [ ] Adicionar áudio de teste (`YYYY-MM-DD.mp3`) via Git LFS
