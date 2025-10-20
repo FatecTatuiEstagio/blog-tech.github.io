@@ -3,12 +3,12 @@ layout: post
 title: "Isenção de Taxa de Inscrição no Vestibular da Fatec Tatuí"
 date: 2025-09-04
 categories: ["Fatec Tatuí", "Vestibular", "Isenção"]
-author: "Redação Tech Blog"
-convidado: "Jefferson Nedelciu"
-image: "/assets/image/post/2025/9/04.jpg"
+convidado: "Jeferson Nedelciu"
+image: "/assets/image/post/2025/09/2025-09-04.jpg"
+public_id: "audio/2025/2025-09-04_ce811bb610b6094ffac91ee090554adb"
 ---
 
-Quer estudar na Fatec Tatuí sem pagar taxa de inscrição? Agora é possível! Na Fatec Tatuí, o ensino tecnológico de qualidade anda de mãos dadas com a oportunidade. Em entrevista à Rádio Notícias, o diretor acadêmico professor Jefferson Nedelso explicou todos os detalhes sobre o vestibular do 1º semestre de 2026 e destacou o processo de isenção e redução da taxa de inscrição, um benefício que amplia o acesso ao ensino superior.
+Quer estudar na Fatec Tatuí sem pagar taxa de inscrição? Agora é possível! Na Fatec Tatuí, o ensino tecnológico de qualidade anda de mãos dadas com a oportunidade. Em entrevista à Rádio Notícias, o diretor acadêmico professor Jeferson Nedelso explicou todos os detalhes sobre o vestibular do 1º semestre de 2026 e destacou o processo de isenção e redução da taxa de inscrição, um benefício que amplia o acesso ao ensino superior.
 
 ## Informações sobre as Inscrições
 
@@ -22,7 +22,7 @@ As inscrições para o vestibular começam no dia **15 de setembro** e seguem at
 - Alunos que estejam cursando o 3º ano do ensino médio;
 - Candidatos cuja renda per capita familiar seja de até um salário mínimo.
 
-"O site é intuitivo e o processo é simples. Basta enviar os documentos e aguardar o resultado", destacou o professor Jefferson. Além disso, quem tiver dificuldade pode procurar apoio diretamente na Fatec Tatuí até o dia **12 de setembro** ou nos plantões presenciais que a instituição realiza em locais estratégicos da cidade.
+"O site é intuitivo e o processo é simples. Basta enviar os documentos e aguardar o resultado", destacou o professor Jeferson. Além disso, quem tiver dificuldade pode procurar apoio diretamente na Fatec Tatuí até o dia **12 de setembro** ou nos plantões presenciais que a instituição realiza em locais estratégicos da cidade.
 
 ## Cursos Oferecidos
 

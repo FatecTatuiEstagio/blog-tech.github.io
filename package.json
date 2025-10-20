@@ -3,10 +3,11 @@
   "version": "1.0.0",
   "description": "Blog do Mundo Tecnológico - Jekyll site with Tailwind CSS",
   "scripts": {
-    "dev": "concurrently \"tailwindcss -i ./assets/css/tailwind-input.css -o ./assets/css/tailwind.css --watch\" \"bundle exec jekyll serve\"",
+    "dev": "concurrently \"tailwindcss -i ./assets/css/tailwind-input.css -o ./assets/css/tailwind.css --watch\" \"bundle exec jekyll serve --incremental\"",
     "build": "tailwindcss -i ./assets/css/tailwind-input.css -o ./assets/css/tailwind.css --minify",
     "build-css": "tailwindcss -i ./assets/css/tailwind-input.css -o ./assets/css/tailwind.css --watch",
-    "upload": "node scripts/upload-audios.js"
+    "upload": "node scripts/upload-audios.js",
+    "get": "node scripts/update-public.js"
   },
   "devDependencies": {
     "@tailwindcss/forms": "^0.5.7",

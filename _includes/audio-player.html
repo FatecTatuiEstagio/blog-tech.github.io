@@ -1,4 +1,4 @@
-{% assign audio_date = include.date | default: page.date | date: "%Y-%m-%d" %}
+{% assign audio_date = include.audio_date | default: page.public_id %}
 {% assign audio_data = site.data.cloudinary-urls[audio_date] %}
 
 {% if audio_data %}
