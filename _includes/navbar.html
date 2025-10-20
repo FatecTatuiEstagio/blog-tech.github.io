@@ -1,178 +1,166 @@
-<header class="site-header" role="banner">
-  <div class="wrapper">
-    <nav class="site-nav">
-      <div class="nav-container">
-        <a class="site-title" rel="author" href="{{ '/' | relative_url }}">
-          <img class="w-5" src="{{ '/assets/image/fatec.png' | relative_url }}" alt="Logo fatec" class="site-logo">
-          <img src="{{ '/assets/image/cps.png' | relative_url }}" alt="Logo CPS" class="site-logo">
-          <img src="{{ '/assets/image/radio.png' | relative_url }}" alt="Logo Radio Noticias" class="site-logo">
-          <span class="site-name">Blog do Mundo Tecnológico</span>
+<header class="bg-[#072446] border-b border-gray-700" role="banner">
+  <nav class="container mx-auto px-4">
+    <div class="flex items-center justify-between h-16 relative">
+      <!-- Logo -->
+      <div class="flex items-center gap-3">
+        <a href="https://www.radionoticias.com.br/" target="_blank">
+          <img
+            src="{{ '/assets/image/radio.png' | relative_url }}"
+            alt="Rádio Notícias"
+            class="h-10 w-auto">
         </a>
-        
-        <div class="nav-menu">
-          <input type="checkbox" id="nav-trigger" class="nav-trigger" />
-          <label for="nav-trigger" class="menu-icon">
-            <span></span>
-          </label>
-          
-          <div class="trigger">
-            {%- for path in page_paths -%}
-              {%- assign my_page = site.pages | where: "path", path | first -%}
-              {%- if my_page.title -%}
-                <a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
-              {%- endif -%}
-            {%- endfor -%}
-            <a class="page-link" href="{{ '/about/' | relative_url }}">Sobre</a>
-          </div>
-        </div>
+        <a href="https://www.fatectatui.edu.br/site4/index.php" target="_blank">
+          <img
+            src="{{ '/assets/image/fatec.png' | relative_url }}"
+            alt="Fatec Tatuí"
+            class="h-10 w-auto">
+        </a>
+        <a href="https://www.cps.sp.gov.br/" target="_blank">
+          <img
+            src="{{ '/assets/image/cps.png' | relative_url }}"
+            alt="CPS"
+            class="h-10 w-auto">
+        </a>
       </div>
-    </nav>
-  </div>
+
+      <!-- Título Centralizado -->
+      <h1 class="text-white text-xl font-light absolute left-1/2 transform -translate-x-1/2 hidden lg:block">
+        <a href="{{ '/' | relative_url }}">
+          Blog
+          <span class="font-semibold bg-gradient-to-r from-[#71c3ec] to-[#fbfcfd] bg-clip-text text-transparent">Mundo Tecnológico</span>
+        </a>
+      </h1>
+
+      <!-- Ícone de Busca -->
+      <div class="flex items-center">
+        <button
+          id="searchToggle"
+          class="text-white hover:text-gray-300 transition-colors p-2"
+          aria-label="Buscar">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Barra de Busca (oculta por padrão) -->
+    <div id="searchBar" class="hidden pb-4">
+      <div class="relative max-w-2xl mx-auto">
+        <input
+          type="text"
+          id="search-input"
+          placeholder="Buscar no blog..."
+          class="w-full px-4 py-2 pr-10 rounded-lg bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-white/50">
+      </div>
+    </div>
+  </nav>
 </header>
 
+<script src="https://cdn.jsdelivr.net/npm/simple-jekyll-search@1.7.3/dest/simple-jekyll-search.min.js"></script>
+
+<script>
+  // Toggle da barra de busca
+  document.addEventListener('DOMContentLoaded', function() {
+    const searchToggle = document.getElementById('searchToggle');
+    const searchBar = document.getElementById('searchBar');
+    const searchInput = document.getElementById('search-input');
+    
+    if (searchToggle && searchBar) {
+      searchToggle.addEventListener('click', function() {
+        searchBar.classList.toggle('hidden');
+        if (!searchBar.classList.contains('hidden')) {
+          searchInput.focus();
+        }
+      });
+    }
+    
+    // Inicializa Simple Jekyll Search
+    SimpleJekyllSearch({
+      searchInput: searchInput,
+      resultsContainer: document.getElementById('search-results'),
+      json: '{{ site.baseurl }}/search.json',
+      searchResultTemplate: '<div class="bg-white rounded-lg shadow-lg overflow-hidden mb-3"><article class="border-b border-gray-200 last:border-b-0 hover:bg-gray-50 transition-colors"><a href="{url}" class="block p-4"><h3 class="text-lg font-semibold text-gray-900 mb-2">{title}</h3><p class="text-sm text-gray-600 mb-2">{description}</p><div class="flex items-center gap-4 text-xs text-gray-500"><span>{date}</span><span class="text-blue-600">{category}</span></div></a></article></div>',
+      noResultsText: '<div class="bg-white rounded-lg shadow-lg p-6 text-center"><p class="text-gray-500">Nenhum resultado encontrado para sua busca.</p></div>',
+      fuzzy: false,
+      limit: 10
+    });
+  
+    // Oculta o conteúdo principal quando houver resultados de pesquisa
+    const mainContent = document.getElementById('main-content');
+    const searchResultsContainer = document.getElementById('search-results');
+    
+    if (searchInput && mainContent && searchResultsContainer) {
+      // Observa mudanças no container de resultados
+      const observer = new MutationObserver(function(mutations) {
+        if (searchResultsContainer.innerHTML.trim() !== '') {
+          mainContent.style.display = 'none';
+        } else {
+          mainContent.style.display = 'block';
+        }
+      });
+      
+      observer.observe(searchResultsContainer, { 
+        childList: true, 
+        subtree: true 
+      });
+      
+      // Também monitora quando o input é limpo
+      searchInput.addEventListener('input', function() {
+        if (searchInput.value.trim() === '') {
+          mainContent.style.display = 'block';
+        }
+      });
+    }
+  });
+</script>
+
 <style>
-.site-header {
-  background-color: #072446;
-  border-bottom: 1px solid #e8e8e8;
-  min-height: 55.95px;
-  position: relative;
-}
-
-.site-header .wrapper {
-  max-width: -webkit-calc(800px - (30px * 2));
-  max-width: calc(800px - (30px * 2));
-  margin-right: auto;
-  margin-left: auto;
-  padding-right: 15px;
-  padding-left: 15px;
-}
-
-.site-nav {
-  line-height: 54px;
-}
-
-.nav-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.site-title {
-  display: flex;
-  align-items: center;
-  color: white !important;
-  text-decoration: none;
-  font-size: 26px;
-  font-weight: 300;
-  letter-spacing: -1px;
-  margin-bottom: 0;
-  float: left;
-}
-
-.site-title:hover {
-  text-decoration: none;
-  color: #f0f0f0 !important;
-}
-
-.site-logo {
-  height: 40px;
-  width: auto;
-  margin-right: 10px;
-}
-
-.site-name {
-  font-weight: 500;
-}
-
-.nav-menu {
-  position: relative;
-}
-
-.page-link {
-  color: white;
-  text-decoration: none;
-  margin-left: 20px;
-  font-weight: 400;
-}
-
-.page-link:hover {
-  color: #f0f0f0;
-  text-decoration: underline;
-}
-
-.menu-icon {
-  display: none;
-}
-
-.nav-trigger {
-  display: none;
-}
-
-.trigger {
-  display: flex;
-  align-items: center;
-}
-
-@media screen and (max-width: 600px) {
-  .nav-container {
-    flex-direction: column;
-    align-items: flex-start;
+  /* Estilo para a área de resultados */
+  #search-results {
+    animation: fadeIn 0.3s ease-in-out;
   }
-  
-  .site-title {
-    margin-bottom: 10px;
-  }
-  
-  .menu-icon {
-    display: block;
-    float: right;
-    width: 36px;
-    height: 26px;
-    line-height: 0;
-    padding-top: 10px;
-    text-align: center;
-    cursor: pointer;
-  }
-  
-  .menu-icon > span {
-    display: block;
-    width: 18px;
-    height: 2px;
-    border-radius: 1px;
-    background-color: white;
-    margin: 3px auto;
-  }
-  
-  .menu-icon > span:nth-child(1) {
-    transform-origin: 50% 50%;
-    transition: transform 0.2s;
-  }
-  
-  .menu-icon > span:nth-child(2) {
-    transition: opacity 0.2s;
-  }
-  
-  .menu-icon > span:nth-child(3) {
-    transform-origin: 50% 50%;
-    transition: transform 0.2s;
-  }
-  
-  .trigger {
-    clear: both;
+
+  #search-results:empty {
     display: none;
-    flex-direction: column;
-    align-items: flex-start;
-    width: 100%;
   }
-  
-  .nav-trigger:checked ~ .trigger {
-    display: flex;
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
-  
-  .page-link {
-    display: block;
-    padding: 5px 0;
-    margin-left: 0;
+
+  /* Scrollbar customizado */
+  #search-results::-webkit-scrollbar {
+    width: 8px;
   }
-}
+
+  #search-results::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+  }
+
+  #search-results::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+  }
+
+  #search-results::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.5);
+  }
 </style>

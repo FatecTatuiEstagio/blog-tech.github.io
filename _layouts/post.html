@@ -1,21 +1,49 @@
 ---
 layout: default
 ---
-<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
-  <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
-    <p class="post-meta">
-      <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-        {{ page.date | date: date_format }}
+<article
+  class="post h-entry max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12"
+  itemscope
+  itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header mb-8">
+    <h1 class="post-title p-name text-3xl sm:text-4xl lg:text-5xl font-bold text-dark mb-4" itemprop="name headline">{{ page.title | escape }}</h1>
+    <p class="post-meta text-gray-600 flex flex-wrap items-center gap-2">
+      {%- if page.convidado -%}
+        <span class="flex items-center gap-1">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+          </svg>
+          <span class="font-medium">{{ page.convidado }}</span>
+        </span>
+        •
+      {%- endif -%}
+      {%- if page.categories and page.categories.size > 0 -%}
+        <span class="flex items-center gap-1">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"></path>
+          </svg>
+          <span>{{ page.categories | join: ", " }}</span>
+        </span>
+        •
+      {%- endif -%}
+      <time
+        class="dt-published flex items-center gap-1"
+        datetime="{{ page.date | date_to_xmlschema }}"
+        itemprop="datePublished">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+        </svg>
+        {%- assign m = page.date | date: "%-m" | minus: 1 -%}
+        {%- assign meses = "Jan,Fev,Mar,Abr,Mai,Jun,Jul,Ago,Set,Out,Nov,Dez" | split: "," -%}
+        {{ meses[m] }} {{ page.date | date: "%d, %Y" }}
       </time>
-      {%- if page.author -%}
-        • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ page.author }}</span></span>
-      {%- endif -%}</p>
+    </p>
   </header>
 
-  <div class="post-content e-content" itemprop="articleBody">
+  {%- include audio-player.html audio_data=page.date  title=page.title -%}
+  <div class="post-content e-content prose prose-lg max-w-none" itemprop="articleBody">
     {{ content }}
   </div>
 
@@ -23,5 +51,8 @@ layout: default
     {%- include disqus_comments.html -%}
   {%- endif -%}
 
-  <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
+  <a
+    class="u-url"
+    href="{{ page.url | relative_url }}"
+    hidden></a>
 </article>

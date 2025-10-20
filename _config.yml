@@ -9,6 +9,18 @@ url: "https://blog-tech.github.io" # the base hostname & protocol for your site,
 github:
   username: FatecTatuiEstagio
 
+# Links Externos
+fatec:
+  site: "https://www.fatectatui.edu.br/site4/index.php"
+  instagram: "https://www.instagram.com/fatectatui/"
+  facebook: "https://www.facebook.com/fatectatui/"
+
+cps:
+  site: "https://www.cps.sp.gov.br/"
+
+radio:
+  site: "https://www.radionoticias.com.br/"
+
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
@@ -34,3 +46,9 @@ exclude:
   - .github/
   - README.md
   - LICENSE
+  - package.json
+  - package-lock.json
+  - tailwind.config.js
+  - assets/audio/
+  - scripts/
+  - docs/
