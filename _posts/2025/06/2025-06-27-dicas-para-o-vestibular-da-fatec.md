@@ -9,12 +9,12 @@ public_id: "audio/2025/2025-06-27_f8fcc6525b4d54bec192779514892a77"
 ---
 
 **Resumo:**  
-Nesta edição da Rádio Notícias, o diretor acadêmico da Fatec Tatuí, **Jefferson Nedelciu**, oferece dicas cruciais para os candidatos ao vestibular do dia 29 de junho, abordando desde documentos necessários e vestimenta adequada até o controle da ansiedade e o processo de matrícula.
+Nesta edição da Rádio Notícias, o diretor acadêmico da Fatec Tatuí, **Jeferson Nedelciu**, oferece dicas cruciais para os candidatos ao vestibular do dia 29 de junho, abordando desde documentos necessários e vestimenta adequada até o controle da ansiedade e o processo de matrícula.
 
 ---
 
 Vai prestar o vestibular da **FATEC Tatuí** e está ansioso?  
-A Rádio Notícias convidou **Jefferson Nedelciu**, diretor acadêmico da FATEC Tatuí, para compartilhar dicas valiosas que vão além do conteúdo programático. Nesta entrevista, Nedelciu oferece um guia prático para garantir que os candidatos cheguem preparados e confiantes no dia da prova, minimizando imprevistos e maximizando o desempenho.
+A Rádio Notícias convidou **Jeferson Nedelciu**, diretor acadêmico da FATEC Tatuí, para compartilhar dicas valiosas que vão além do conteúdo programático. Nesta entrevista, Nedelciu oferece um guia prático para garantir que os candidatos cheguem preparados e confiantes no dia da prova, minimizando imprevistos e maximizando o desempenho.
 
 Ele enfatiza a importância de ler atentamente o manual do candidato, mas vai além, destacando os pontos cruciais que frequentemente causam problemas:
 
