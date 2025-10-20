@@ -5,7 +5,7 @@ date: 2025-05-15
 categories: ["Tecnologias", "Sacolas Biodegradáveis", "Meio Ambiente"]
 convidado: "Prof. Me. Jeferson Nedelciu"
 image: "/assets/image/post/2025/05/2025-05-15.jpg"
-public_id: ""
+public_id: "audio/2025/2025-05-15_1ded33cd949514bfdd89bae76c51371f"
 ---
 
 Nesta entrevista à Rádio Notícias, o Professor Mestre Jeferson Nedelciu, docente da Fatec Tatuí, apresenta um estudo promissor sobre sacolas biodegradáveis com capacidade de auto reparação, uma inovação com potencial para revolucionar o mercado e reduzir o impacto ambiental causado pelo plástico.  

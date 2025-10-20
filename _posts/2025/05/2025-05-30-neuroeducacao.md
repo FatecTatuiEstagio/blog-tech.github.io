@@ -5,7 +5,7 @@ date: 2025-05-30
 categories: ["Neurociência", "Neuroeducação"]
 convidado: "Prof. Me. Jeferson Nedelciu e Júlia Moura"
 image: "/assets/image/post/2025/05/2025-05-29.jpg"
-public_id: ""
+public_id: "audio/2025/2025-05-30_d41a372297027b54cdd668991fff9036"
 ---
 
 Nesta entrevista à Rádio Notícias, o Professor Mestre Jefferson Nedelciu, diretor acadêmico da FATEC Tatuí, e a aluna e estagiária Júlia Moura exploram o tema da iniciação científica com foco na neuroeducação.  
