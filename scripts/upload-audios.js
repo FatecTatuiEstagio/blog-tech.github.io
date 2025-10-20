@@ -76,6 +76,17 @@ function extractYearFromFilename(filename) {
   return null;
 }
 
+// Função para extrair data completa do nome do arquivo
+function extractDateFromFilename(filename) {
+  // Exemplo: 2025-09-18.mp3 -> 2025-09-18
+  // Exemplo: 2025-08-29-01.mp3 -> 2025-08-29
+  const match = filename.match(/^(\d{4}-\d{2}-\d{2})/);
+  if (match) {
+    return match[1];
+  }
+  return null;
+}
+
 // Função para remover duplicatas do objeto JSON (segurança extra)
 function removeDuplicates(urlsData) {
   const seen = new Set();
@@ -170,8 +181,15 @@ async function uploadAudios() {
         // Extrai o ano do nome do arquivo
         const year = extractYearFromFilename(fileName);
         
+        // Extrai a data completa do nome do arquivo
+        const date = extractDateFromFilename(fileName);
+        
         if (!year) {
           throw new Error('Formato de nome inválido (esperado: YYYY-MM-DD.ext)');
+        }
+        
+        if (!date) {
+          throw new Error('Não foi possível extrair a data do arquivo');
         }
         
         // Formato: audio/2025/2025-09-18_hash
@@ -185,7 +203,7 @@ async function uploadAudios() {
         if (exists) {
           console.log(`✓ Arquivo já existe: ${fileName} (${year})`);
           const url = cloudinary.url(publicId, { resource_type: 'video' });
-          results.push({ file: fileName, year, url, status: 'exists' });
+          results.push({ file: fileName, year, date, url, publicId, status: 'exists' });
         } else {
           // Faz upload
           console.log(`↑ Uploading: ${fileName} → audio/${year}/`);
@@ -198,7 +216,7 @@ async function uploadAudios() {
           });
           
           console.log(`✓ Upload completo: ${fileName}`);
-          results.push({ file: fileName, year, url: result.secure_url, status: 'uploaded' });
+          results.push({ file: fileName, year, date, url: result.secure_url, publicId, status: 'uploaded' });
         }
       } catch (error) {
         console.error(`✗ Erro ao processar ${fileName}:`, error.message);
@@ -256,9 +274,9 @@ async function uploadAudios() {
     let skippedEntries = 0;
     
     results.forEach(r => {
-      if (r.url) {
-        // Usa o nome do arquivo sem extensão como chave
-        const key = path.parse(r.file).name;
+      if (r.url && r.publicId) {
+        // Usa o public_id completo como chave
+        const key = r.publicId;
         
         // Valida a chave (não pode ser vazia ou inválida)
         if (!key || key.trim() === '') {
@@ -272,7 +290,8 @@ async function uploadAudios() {
         // Se já existe e é idêntico, pula
         if (existingEntry && 
             existingEntry.url === r.url && 
-            existingEntry.year === r.year) {
+            existingEntry.year === r.year &&
+            existingEntry.date === r.date) {
           skippedEntries++;
           return;
         }
@@ -280,7 +299,8 @@ async function uploadAudios() {
         // Adiciona ou atualiza
         urlsData[key] = {
           url: r.url,
-          year: r.year
+          year: r.year,
+          date: r.date
         };
         
         if (isNew) {

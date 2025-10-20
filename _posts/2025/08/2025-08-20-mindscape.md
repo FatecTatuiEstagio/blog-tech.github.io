@@ -5,6 +5,7 @@ date: 2025-08-20
 categories: [MindScape, Inovação e Educação]
 convidado: "Rosana Giacomazzi e Luiz Felipe"
 image: "/assets/image/post/2025/08/2025-08-20.jpg"
+public_id: "audio/2025/2025-08-20_cea269695ca84912049657479a8261fa"
 ---
 
 Já pensou em uma plataforma capaz de unir professores e alunos para transformar a educação? Na Fatec Tatuí, inovação não é apenas discurso, é prática! Durante uma entrevista na Rádio Notícias, a professora Rosana Giacomazzi e o aluno Luiz Felipe compartilharam os bastidores do MindScape, um projeto que promete aproximar gerações e repensar o papel da tecnologia no ambiente educacional.

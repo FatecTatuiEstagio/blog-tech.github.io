@@ -5,6 +5,7 @@ date: 2025-08-29
 categories: ["Maratona", "Programação", "Desenvolvedores"]  
 convidado: "Marlon, Pedro, Luís e Jeferson Nedelciu"
 image: "/assets/image/post/2025/08/2025-08-29-01.jpg"
+public_id: "audio/2025/2025-08-29-01_56ed1804ed785ddf9e24092a8c9060c1"
 ---
 
 A Rádio Notícias entrevista o diretor acadêmico da Fatec Tatuí, Professor **Jeferson Nedelciu**,  
