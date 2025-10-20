@@ -26,3 +26,5 @@ assets/js/dist
 # Arquivos de ambiente
 .env
 .env.local
+
+assets/audio/

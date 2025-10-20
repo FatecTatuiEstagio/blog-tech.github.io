@@ -76,21 +76,50 @@ function extractYearFromFilename(filename) {
   return null;
 }
 
+// Função para remover duplicatas do objeto JSON (segurança extra)
+function removeDuplicates(urlsData) {
+  const seen = new Set();
+  const cleaned = {};
+  
+  Object.entries(urlsData).forEach(([key, value]) => {
+    // Verifica se a chave já foi vista
+    if (seen.has(key)) {
+      console.warn(`⚠ Chave duplicada removida: ${key}`);
+      return;
+    }
+    
+    // Valida estrutura do valor
+    if (value && typeof value === 'object' && value.url && value.year) {
+      cleaned[key] = value;
+      seen.add(key);
+    } else {
+      console.warn(`⚠ Entrada inválida removida: ${key}`);
+    }
+  });
+  
+  return cleaned;
+}
+
 // Função para verificar se arquivo já existe no Cloudinary
 async function checkIfExists(publicId) {
   try {
     await cloudinary.api.resource(publicId, { resource_type: 'video' });
+    console.log('Encontrado no Cloudinary:', publicId);
     return true;
   } catch (error) {
     // Verifica se é 404 tanto no http_code quanto na mensagem de erro
+    //audio/2025/audio/2025/2025-08-20_cea269695ca84912049657479a8261fa
     if (error.http_code === 404 || (error.error && error.error.http_code === 404)) {
+      console.log('Não encontrado no Cloudinary:', publicId);
       return false;
     }
     // Erros de autenticação ou rede
     if (error.http_code === 401) {
+      console.error('❌ Erro de autenticação com o Cloudinary:', error.message);
       throw new ConfigurationError('Credenciais do Cloudinary inválidas');
     }
     if (error.http_code === 403) {
+      console.error('❌ Acesso negado ao Cloudinary:', error.message);
       throw new ConfigurationError('Acesso negado ao Cloudinary. Verifique suas permissões.');
     }
     
@@ -98,7 +127,7 @@ async function checkIfExists(publicId) {
     const errorMessage = error.message || error.error?.message || 'Erro desconhecido';
     const httpCode = error.http_code ? ` (HTTP ${error.http_code})` : '';
     const errorDetails = error.error ? ` - ${JSON.stringify(error.error)}` : '';
-    
+    console.error(`❌ Erro ao verificar existência no Cloudinary${httpCode}: ${errorMessage}${errorDetails}`);
     throw new Error(`Erro ao verificar existência no Cloudinary${httpCode}: ${errorMessage}${errorDetails}`);
   }
 }
@@ -150,8 +179,9 @@ async function uploadAudios() {
         const publicId = `audio/${year}/${fileNameWithoutExt}_${fileHash}`;
 
         // Verifica se já existe
+        console.log(publicId);
         const exists = await checkIfExists(publicId);
-        
+        console.log(exists ? 'ⓘ' : '➤', fileName);
         if (exists) {
           console.log(`✓ Arquivo já existe: ${fileName} (${year})`);
           const url = cloudinary.url(publicId, { resource_type: 'video' });
@@ -163,7 +193,6 @@ async function uploadAudios() {
           const result = await cloudinary.uploader.upload(filePath, {
             resource_type: 'video',
             public_id: publicId,
-            folder: `audio/${year}`,
             overwrite: false,
             tags: ['blog-tech', 'audio', year]
           });
@@ -199,16 +228,68 @@ async function uploadAudios() {
   // Salva URLs em arquivo JSON para uso no Jekyll
   try {
     const outputPath = path.join(__dirname, '..', '_data', 'cloudinary-urls.json');
-    const urlsData = {};
+    
+    // Lê o arquivo JSON existente (se existir)
+    let urlsData = {};
+    if (fs.existsSync(outputPath)) {
+      try {
+        const existingData = fs.readFileSync(outputPath, 'utf8');
+        const parsedData = JSON.parse(existingData);
+        
+        // Valida que é um objeto e não um array
+        if (typeof parsedData === 'object' && !Array.isArray(parsedData)) {
+          urlsData = parsedData;
+          console.log(`\n📄 Arquivo JSON existente carregado: ${Object.keys(urlsData).length} registro(s)`);
+        } else {
+          console.warn('⚠ Arquivo JSON existente tem formato inválido. Criando novo arquivo.');
+          urlsData = {};
+        }
+      } catch (parseError) {
+        console.warn('⚠ Erro ao ler arquivo JSON existente. Criando novo arquivo.');
+        urlsData = {};
+      }
+    }
+    
+    // Adiciona ou atualiza os novos resultados
+    let newEntries = 0;
+    let updatedEntries = 0;
+    let skippedEntries = 0;
     
     results.forEach(r => {
       if (r.url) {
         // Usa o nome do arquivo sem extensão como chave
         const key = path.parse(r.file).name;
+        
+        // Valida a chave (não pode ser vazia ou inválida)
+        if (!key || key.trim() === '') {
+          console.warn(`⚠ Chave inválida para arquivo: ${r.file}`);
+          return;
+        }
+        
+        const existingEntry = urlsData[key];
+        const isNew = !existingEntry;
+        
+        // Se já existe e é idêntico, pula
+        if (existingEntry && 
+            existingEntry.url === r.url && 
+            existingEntry.year === r.year) {
+          skippedEntries++;
+          return;
+        }
+        
+        // Adiciona ou atualiza
         urlsData[key] = {
           url: r.url,
           year: r.year
         };
+        
+        if (isNew) {
+          newEntries++;
+          console.log(`  ➕ Nova entrada: ${key}`);
+        } else {
+          updatedEntries++;
+          console.log(`  🔄 Atualizada: ${key}`);
+        }
       }
     });
     
@@ -218,11 +299,17 @@ async function uploadAudios() {
       fs.mkdirSync(outputDir, { recursive: true });
     }
     
+    // Remove duplicatas e valida estrutura (segurança extra)
+    urlsData = removeDuplicates(urlsData);
+    
     // Salva o arquivo JSON
     fs.writeFileSync(outputPath, JSON.stringify(urlsData, null, 2), 'utf8');
     
     console.log(`\n✓ URLs salvas em: ${outputPath}`);
     console.log(`  Total de URLs: ${Object.keys(urlsData).length}`);
+    console.log(`  Novas entradas: ${newEntries}`);
+    console.log(`  Entradas atualizadas: ${updatedEntries}`);
+    console.log(`  Entradas sem alteração: ${skippedEntries}`);
   } catch (error) {
     console.error('❌ Erro ao salvar arquivo JSON:', error.message);
     throw new Error(`Falha ao salvar URLs: ${error.message}`);
