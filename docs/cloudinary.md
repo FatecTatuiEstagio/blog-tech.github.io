@@ -686,10 +686,10 @@ npm run upload-audios
 - [x] Criar script `scripts/upload-audios.js`
 - [x] Adicionar `CLOUDINARY_URL` nos GitHub Secrets
 - [x] Criar diretório `assets/audio/posts/`
-- [ ] Atualizar/criar `.github/workflows/deploy.yml`
-- [ ] Criar include `_includes/audio-player.html`
-- [ ] Adicionar áudio de teste (`YYYY-MM-DD.mp3`) via Git LFS
-- [ ] Verificar com `git lfs ls-files`
+- [x] Atualizar/criar `.github/workflows/deploy.yml`
+- [x] Criar include `_includes/audio-player.html`
+<!-- - [ ] Adicionar áudio de teste (`YYYY-MM-DD.mp3`) via Git LFS -->
+<!-- - [ ] Verificar com `git lfs ls-files` -->
 - [ ] Commit e push da configuração inicial
 - [ ] Verificar GitHub Actions executou com sucesso
 - [ ] Verificar áudio no Cloudinary

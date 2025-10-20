@@ -13,10 +13,8 @@ _site
 # NPM dependencies
 node_modules
 package-lock.json
-assets/css/tailwind.css
 
 # IDE configurations
-.idea
 .vscode/*
 !.vscode/settings.json
 !.vscode/extensions.json

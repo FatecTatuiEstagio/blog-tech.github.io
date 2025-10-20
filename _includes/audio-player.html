@@ -1,25 +1,140 @@
 {% assign audio_date = include.date | default: page.date | date: "%Y-%m-%d" %}
 {% assign audio_data = site.data.cloudinary-urls[audio_date] %}
 
+{% comment %} 
+  {% if audio_data %}
+    <div class="audio-player my-6 p-4 rounded-lg shadow-sm border border-blue-100" style="background-color: #102564;">
+      <div class="flex items-center mb-3">
+        <svg
+          class="w-5 h-5 text-blue-600 mr-2"
+          fill="currentColor"
+          viewBox="0 0 20 20">
+          <path d="M18 3a1 1 0 00-1.196-.98l-10 2A1 1 0 006 5v9.114A4.369 4.369 0 005 14c-1.657 0-3 .895-3 2s1.343 2 3 2 3-.895 3-2V7.82l8-1.6v5.894A4.37 4.37 0 0015 12c-1.657 0-3 .895-3 2s1.343 2 3 2 3-.895 3-2V3z" />
+        </svg>
+      </div>
+  
+      <audio
+        controls
+        controlsList="nodownload"
+        class="w-full h-10">
+        <source src="{{ audio_data.url }}" type="audio/mpeg">
+        Seu navegador não suporta o elemento de áudio.
+      </audio>
+    </div>
+  {% endif %} 
+{% endcomment %}
+
+<!-- _includes/audio-player.html -->
 {% if audio_data %}
-  <div class="audio-player my-6 p-4 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg shadow-sm border border-blue-100">
-    <div class="flex items-center mb-3">
-      <svg
-        class="w-5 h-5 text-blue-600 mr-2"
-        fill="currentColor"
-        viewBox="0 0 20 20">
-        <path d="M18 3a1 1 0 00-1.196-.98l-10 2A1 1 0 006 5v9.114A4.369 4.369 0 005 14c-1.657 0-3 .895-3 2s1.343 2 3 2 3-.895 3-2V7.82l8-1.6v5.894A4.37 4.37 0 0015 12c-1.657 0-3 .895-3 2s1.343 2 3 2 3-.895 3-2V3z" />
-      </svg>
-      <h3 class="text-sm font-semibold text-gray-700">Versão em Áudio</h3>
+  <div
+    class="bg-[#102564] text-white rounded-lg p-4 my-6 audio-player"
+    data-audio-url="{{ audio_data.url }}"
+    data-title="{{ include.title }}">
+    <audio></audio>
+
+    <div class="text-tech-white mb-3">
+      <h3 class="text-lg font-semibold">Ouça esta entrevista</h3>
     </div>
 
-    <audio controls class="w-full h-10">
-      <source src="{{ audio_data.url }}" type="audio/mpeg">
-      Seu navegador não suporta o elemento de áudio.
-    </audio>
+    <div class="flex items-center space-x-3">
+      <button type="button" class="play-btn bg-tech-light-blue hover:bg-tech-light-blue/80 text-tech-white rounded-full w-10 h-10 flex items-center justify-center transition-colors">
+        ▶
+      </button>
 
-    <p class="text-xs text-gray-500 mt-2">
-      📅 Publicado em {{ audio_data.year }}
-    </p>
+      <div class="flex-1 space-y-2">
+        <input
+          type="range"
+          class="seek-range w-full h-2 rounded-full appearance-none bg-tech-white/20 cursor-pointer"
+          min="0"
+          max="0"
+          value="0" />
+        <div class="flex justify-between text-xs text-tech-white/70">
+          <span class="current-time">00:00</span>
+          <span class="duration">00:00</span>
+        </div>
+      </div>
+
+      <div class="flex items-center space-x-2">
+        <button type="button" class="mute-btn text-tech-white hover:text-tech-light-blue transition-colors">🔊</button>
+        <input
+          type="range"
+          class="volume-range w-20 h-1 rounded-full appearance-none bg-tech-white/20 cursor-pointer"
+          min="0"
+          max="1"
+          step="0.01"
+          value="1" />
+      </div>
+    </div>
   </div>
 {% endif %}
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll(".audio-player").forEach(player => {
+    const audio = player.querySelector("audio");
+    const playBtn = player.querySelector(".play-btn");
+    const muteBtn = player.querySelector(".mute-btn");
+    const seekRange = player.querySelector(".seek-range");
+    const volumeRange = player.querySelector(".volume-range");
+    const currentTimeEl = player.querySelector(".current-time");
+    const durationEl = player.querySelector(".duration");
+  
+    audio.src = player.dataset.audioUrl;
+  
+    // Format time MM:SS
+    function formatTime(time) {
+      if (isNaN(time)) return "00:00";
+      const m = Math.floor(time / 60);
+      const s = Math.floor(time % 60);
+      return `${m.toString().padStart(2, "0")}:${s.toString().padStart(2, "0")}`;
+    }
+  
+    // Play/pause toggle
+    playBtn.addEventListener("click", () => {
+      if (audio.paused) {
+        audio.play();
+        playBtn.textContent = "⏸";
+      } else {
+        audio.pause();
+        playBtn.textContent = "▶";
+      }
+    });
+  
+    // Update seek bar
+    audio.addEventListener("timeupdate", () => {
+      seekRange.value = audio.currentTime;
+      seekRange.style.background = `linear-gradient(to right, #71c3ec ${(audio.currentTime / (audio.duration || 1)) * 100}%, rgba(255,255,255,0.2) ${(audio.currentTime / (audio.duration || 1)) * 100}%)`;
+      currentTimeEl.textContent = formatTime(audio.currentTime);
+    });
+  
+    // Loaded metadata
+    audio.addEventListener("loadedmetadata", () => {
+      seekRange.max = audio.duration;
+      durationEl.textContent = formatTime(audio.duration);
+    });
+  
+    // Seek control
+    seekRange.addEventListener("input", e => {
+      audio.currentTime = e.target.value;
+    });
+  
+    // Volume control
+    volumeRange.addEventListener("input", e => {
+      audio.volume = e.target.value;
+      muteBtn.textContent = audio.volume == 0 ? "🔇" : "🔊";
+      volumeRange.style.background = `linear-gradient(to right, #71c3ec ${audio.volume * 100}%, rgba(255,255,255,0.2) ${audio.volume * 100}%)`;
+    });
+  
+    // Mute toggle
+    muteBtn.addEventListener("click", () => {
+      audio.muted = !audio.muted;
+      muteBtn.textContent = audio.muted ? "🔇" : "🔊";
+    });
+  
+    // Reset when ended
+    audio.addEventListener("ended", () => {
+      playBtn.textContent = "▶";
+    });
+  });
+  });
+</script>
