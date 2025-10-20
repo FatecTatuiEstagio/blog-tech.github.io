@@ -5,7 +5,7 @@ date: 2025-05-03
 categories: ["Inovação", "Mercado de Trabalho"]
 convidado: "Prof. Me. Jeferson Nedelciu"
 image: "/assets/image/post/2025/05/2025-05-03.jpg"
-public_id: ""
+public_id: "audio/2025/2025-05-03_6c79dc24d84169408bca53f6fc17c9fd"
 ---
 
 Nesta entrevista à Rádio Notícias, o Diretor Acadêmico e Professor da Fatec Tatuí, Jeferson Nedelciu, compartilha informações cruciais sobre a instituição.  
