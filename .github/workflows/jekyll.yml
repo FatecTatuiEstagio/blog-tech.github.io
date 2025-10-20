@@ -24,7 +24,7 @@ jobs:
       
       # 3. Instalar dependências Node
       - name: Install Node dependencies
-        run: npm ci
+        run: npm i
       
       # 4. Upload de áudios para Cloudinary
       - name: Upload audio files to Cloudinary
