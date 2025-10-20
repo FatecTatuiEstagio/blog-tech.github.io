@@ -26,26 +26,20 @@ jobs:
       - name: Install Node dependencies
         run: npm i
       
-      # 4. Upload de áudios para Cloudinary
-      - name: Upload audio files to Cloudinary
-        env:
-          CLOUDINARY_URL: ${{ secrets.CLOUDINARY_URL }}
-        run: npm run upload-audios
-      
-      # 5. Setup Ruby para Jekyll
+      # Setup Ruby para Jekyll
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: '3.1'
           bundler-cache: true
       
-      # 6. Build do Jekyll com dados do Cloudinary
+      # Build do Jekyll com dados do Cloudinary
       - name: Build Jekyll site
         run: bundle exec jekyll build
         env:
           JEKYLL_ENV: production
       
-      # 7. Deploy para GitHub Pages
+      # Deploy para GitHub Pages
       - name: Deploy to GitHub Pages
         if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/israel'
         uses: peaceiris/actions-gh-pages@v3
