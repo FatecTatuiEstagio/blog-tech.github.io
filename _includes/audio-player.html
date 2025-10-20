@@ -1,30 +1,6 @@
 {% assign audio_date = include.date | default: page.date | date: "%Y-%m-%d" %}
 {% assign audio_data = site.data.cloudinary-urls[audio_date] %}
 
-{% comment %} 
-  {% if audio_data %}
-    <div class="audio-player my-6 p-4 rounded-lg shadow-sm border border-blue-100" style="background-color: #102564;">
-      <div class="flex items-center mb-3">
-        <svg
-          class="w-5 h-5 text-blue-600 mr-2"
-          fill="currentColor"
-          viewBox="0 0 20 20">
-          <path d="M18 3a1 1 0 00-1.196-.98l-10 2A1 1 0 006 5v9.114A4.369 4.369 0 005 14c-1.657 0-3 .895-3 2s1.343 2 3 2 3-.895 3-2V7.82l8-1.6v5.894A4.37 4.37 0 0015 12c-1.657 0-3 .895-3 2s1.343 2 3 2 3-.895 3-2V3z" />
-        </svg>
-      </div>
-  
-      <audio
-        controls
-        controlsList="nodownload"
-        class="w-full h-10">
-        <source src="{{ audio_data.url }}" type="audio/mpeg">
-        Seu navegador não suporta o elemento de áudio.
-      </audio>
-    </div>
-  {% endif %} 
-{% endcomment %}
-
-<!-- _includes/audio-player.html -->
 {% if audio_data %}
   <div
     class="bg-[#102564] text-white rounded-lg p-4 my-6 audio-player"
