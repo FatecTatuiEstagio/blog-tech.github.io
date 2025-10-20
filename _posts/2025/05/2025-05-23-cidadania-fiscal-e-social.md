@@ -4,7 +4,7 @@ title: "Projeto Integrador de Cidadania Fiscal: Fatec e a Comunidade Juntas pela
 date: 2025-05-23
 categories: ["Inovação", "Mercado de Trabalho"]
 convidado: "Prof. Me. Rosangela Gonçalves - Alunas de Processos Gerenciais"
-image: "/assets/image/post/2025/05/2025-05-22.jpg"
+image: "/assets/image/post/2025/05/2025-05-23.jpg"
 public_id: "audio/2025/2025-05-23_995867c94f06001517bbf155e1f99e19"
 ---
 
