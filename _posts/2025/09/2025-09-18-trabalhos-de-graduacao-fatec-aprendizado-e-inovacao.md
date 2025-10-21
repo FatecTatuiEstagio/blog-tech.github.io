@@ -6,6 +6,7 @@ categories: ["Trabalhos de Graduação", "Inovação", "Fatec Tatuí"]
 convidado: "Prof. Onei de Barros Junior"
 image: "/assets/image/post/2025/09/2025-09-18.jpg"
 public_id: "audio/2025/2025-09-18_7d6c79923612cca5649e304a0c240039"
+description: "Professor da Fatec Tatuí explica como os Trabalhos de Graduação têm contribuído para aproximar os alunos da realidade da indústria e da inovação tecnológica. Os TG permitem que os alunos enfrentem problemas reais, desenvolvam protótipos e colaborem com empresas locais. São citados projetos marcantes como cortadeira a laser e sistema de controle de água, que demonstram criatividade, utilidade e sustentabilidade. Além do conhecimento técnico, os alunos desenvolvem competências essenciais como trabalho em equipe, gestão de projetos, comunicação, autonomia e pensamento crítico durante essa experiência formativa completa."
 ---
 
 🎙 **1. Professor Onei, como os Trabalhos de Graduação na FATEC têm contribuído para aproximar os alunos da realidade da indústria e da inovação tecnológica?**  

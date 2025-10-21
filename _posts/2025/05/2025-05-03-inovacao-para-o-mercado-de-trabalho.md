@@ -6,6 +6,7 @@ categories: ["Inovação", "Mercado de Trabalho"]
 convidado: "Prof. Me. Jeferson Nedelciu"
 image: "/assets/image/post/2025/05/2025-05-03.jpg"
 public_id: "audio/2025/2025-05-03_6c79dc24d84169408bca53f6fc17c9fd"
+description: "O Diretor Acadêmico da Fatec Tatuí compartilha informações sobre a instituição, destacando sua relevância como referência em cursos tecnológicos e como prepara os alunos para inovar no mercado de trabalho. São detalhados o processo de vestibular para o segundo semestre de 2025, a acessibilidade da inscrição e a qualidade do ensino oferecido. A conversa explora a forte conexão da Fatec com empresas da região, os cinco cursos disponíveis, programas de estágio e intercâmbio, além de projetos extracurriculares que proporcionam experiências práticas e oportunidades de desenvolvimento."
 ---
 
 Nesta entrevista à Rádio Notícias, o Diretor Acadêmico e Professor da Fatec Tatuí, Jeferson Nedelciu, compartilha informações cruciais sobre a instituição.  

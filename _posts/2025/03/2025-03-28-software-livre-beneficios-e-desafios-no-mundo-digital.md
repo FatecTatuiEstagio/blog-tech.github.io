@@ -6,6 +6,7 @@ categories: ["Software Livre", "Tecnologia", "Fatec Tatuí"]
 convidado: "Prof. Samuel Antonio Vieira"
 image: "/assets/image/post/2025/03/2025-03-28.jpg"
 public_id: "audio/2025/2025-03-28_2a6d6478507325064b6b70e4c00cd092"
+description: "Especialista em Tecnologia da Informação compartilha sua visão sobre a importância e possibilidades do uso de softwares livres. A conversa percorre desde conceitos fundamentais até aplicações práticas de sistemas abertos como Linux, LibreOffice, GIMP e OBS Studio. São destacadas vantagens como baixo custo, liberdade de modificação e colaboração comunitária, além de abordar os principais desafios, como escassez de suporte técnico centralizado e necessidade de maior capacitação dos usuários. A discussão incentiva o público a experimentar alternativas tecnológicas mais abertas e sustentáveis."
 ---
 
 Na entrevista **“Software Livre: Benefícios e Desafios no Mundo Digital”**, o **Prof. Samuel Antonio Vieira**, docente da Fatec Tatuí e especialista em Tecnologia da Informação, compartilha sua visão sobre a importância e as possibilidades do uso de softwares livres.  

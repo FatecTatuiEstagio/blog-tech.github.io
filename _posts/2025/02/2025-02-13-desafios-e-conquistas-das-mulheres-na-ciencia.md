@@ -5,6 +5,7 @@ date: 2025-02-13
 categories: ["Ciência", "Diversidade", "Educação"]
 convidado: "Profª Patrícia Glaucia Moreno"
 image: "/assets/image/post/2025/02/2025-02-13.jpg"
+description: "Entrevista com a vice-diretora da Fatec Tatuí sobre as dificuldades enfrentadas por mulheres nas áreas científicas e os avanços conquistados ao longo dos anos. A conversa aborda a importância da representatividade feminina no ambiente acadêmico e tecnológico, compartilhando experiências pessoais na docência e gestão educacional. São apresentadas iniciativas que incentivam jovens mulheres a seguirem carreiras científicas, reflexões sobre igualdade de oportunidades, políticas educacionais e o papel das instituições no combate aos estereótipos de gênero."
 ---
 
 No dia **12 de fevereiro de 2025**, o **Blog Mundo Tecnológico** recebeu a **Profª Patrícia Glaucia Moreno**, vice-diretora da **Fatec Tatuí**, para uma conversa inspiradora sobre o tema *“Desafios e conquistas das mulheres na ciência”*.  

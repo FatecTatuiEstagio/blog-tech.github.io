@@ -6,6 +6,7 @@ categories: ["Educação", "Saúde Mental"]
 convidado: "Profª Daiane Roncátó Cardoso Monteiro"
 image: "/assets/image/post/2025/09/2025-09-11.jpg"
 public_id: "audio/2025/2025-09-11_8ce47e4790b3435f065592404de57d11"
+description: "A acolhedora da unidade apresenta o SER-CPS (Sentimento, Emoção e Razão), programa do Centro Paula Souza que fortalece o diálogo e o acolhimento dentro da comunidade acadêmica. A iniciativa promove rodas de conversa, momentos culturais e campanhas como o Setembro Amarelo, incentivando alunos, professores e funcionários a desenvolverem habilidades socioemocionais, como empatia, resiliência e colaboração. O programa está em fase piloto em algumas unidades, com perspectiva de expansão, oferecendo apoio contínuo e preparando os estudantes para lidar com desafios pessoais, acadêmicos e profissionais."
 ---
 
 Na **Fatec Tatuí**, a educação vai além da sala de aula: também é **cuidado com a saúde mental**.  

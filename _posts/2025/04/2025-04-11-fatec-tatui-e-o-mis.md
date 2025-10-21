@@ -5,6 +5,7 @@ date: 2025-04-11
 categories: ["Fatec Tatuí", "Cultura", "Tecnologia"]
 convidado: "Prof. José Carlos Pires Junior e Prof. Lucas Correia Meneguette"
 image: "/assets/image/post/2025/04/2025-04-11.png"
+description: "Docentes da Fatec Tatuí compartilham os detalhes da parceria firmada entre a instituição e o MIS - Museu da Imagem e do Som. A colaboração possibilita o envolvimento dos estudantes em projetos culturais e tecnológicos, promovendo a integração entre educação, arte e inovação. A parceria contempla atividades como exposições interativas, digitalização de acervos, oficinas e ações que ampliam o acesso da comunidade ao patrimônio audiovisual. São destacados os benefícios pedagógicos dessa iniciativa, que contribui para a formação prática dos alunos por meio da participação em projetos reais."
 ---
 
 Nesta entrevista concedida à Rádio Notícias, os professores **José Carlos Pires Junior** e **Lucas Correia Meneguette**, docentes da Fatec Tatuí, compartilham os detalhes da parceria firmada entre a instituição e o MIS – Museu da Imagem e do Som.  
