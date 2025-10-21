@@ -5,6 +5,7 @@ date: 2025-02-21
 categories: ["Inteligência Artificial", "Agronegócio", "Sustentabilidade"]
 convidado: "Prof. Jeferson Nedelciu"
 image: "/assets/image/post/2025/02/2025-02-21.jpg"
+description: "Conversa sobre como tecnologias baseadas em inteligência artificial estão transformando a agricultura ao possibilitar uma aplicação mais precisa e consciente de defensivos agrícolas. Algoritmos inteligentes e sensores conectados ajudam produtores a identificar pragas com eficiência, monitorar plantações em tempo real e utilizar apenas a quantidade necessária de insumos. A discussão destaca a importância da inovação no agronegócio e como a união entre ciência e tecnologia contribui para uma agricultura mais sustentável, segura e economicamente viável."
 ---
 
 No dia **20 de fevereiro de 2025**, o **Blog Mundo Tecnológico** recebeu o **Prof. Jeferson Nedelciu**, professor e diretor acadêmico, para uma entrevista exclusiva sobre o tema *“O uso da Inteligência Artificial na agricultura para reduzir agrotóxicos”*.  

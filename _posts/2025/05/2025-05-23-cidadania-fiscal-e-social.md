@@ -6,6 +6,7 @@ categories: ["Inovação", "Mercado de Trabalho"]
 convidado: "Prof. Me. Rosangela Gonçalves - Alunas de Processos Gerenciais"
 image: "/assets/image/post/2025/05/2025-05-23.jpg"
 public_id: "audio/2025/2025-05-23_995867c94f06001517bbf155e1f99e19"
+description: "Professora e alunas da Fatec Tatuí exploram o projeto integrador de cidadania fiscal na sociedade e comunidade. O projeto visa levar o conhecimento da sala de aula para a comunidade, promovendo ações como oficinas em escolas, palestras em centros comunitários e produção de materiais educativos. As alunas compartilham suas experiências ao levar o conhecimento para além dos muros da Fatec, destacando a importância da conscientização fiscal, especialmente entre jovens. São abordados o uso de ferramentas tecnológicas para disseminar informações e a importância da proatividade no desenvolvimento profissional dos alunos."
 ---
 
 Nesta entrevista à Rádio Notícias, a Professora Mestre Rosângela Araújo, da Fatec Tatuí, e suas alunas Letícia Machado, Bianca Andreia, Natasha Bianca, Júlia Bromberg e Emanuele Vitória, exploram o projeto integrador de cidadania fiscal na sociedade e comunidade.  

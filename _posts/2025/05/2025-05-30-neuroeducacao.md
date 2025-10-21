@@ -6,6 +6,7 @@ categories: ["Neurociência", "Neuroeducação"]
 convidado: "Prof. Me. Jeferson Nedelciu e Júlia Moura"
 image: "/assets/image/post/2025/05/2025-05-29.jpg"
 public_id: "audio/2025/2025-05-30_d41a372297027b54cdd668991fff9036"
+description: "O diretor acadêmico da Fatec Tatuí e uma aluna exploram o tema da iniciação científica com foco na neuroeducação. É detalhado como a instituição oferece ambiente propício para desenvolvimento de pesquisas científicas, destacando o programa de iniciação científica que proporciona aos alunos a oportunidade de investigar, resolver problemas e propor melhorias utilizando o método científico. A aluna compartilha sua experiência explicando como a neuroeducação contribui para o aprendizado, tornando-o mais eficaz e prático. São apresentadas estratégias baseadas na neurociência que podem melhorar os estudos, como revisão espaçada e método Pomodoro."
 ---
 
 Nesta entrevista à Rádio Notícias, o Professor Mestre Jefferson Nedelciu, diretor acadêmico da FATEC Tatuí, e a aluna e estagiária Júlia Moura exploram o tema da iniciação científica com foco na neuroeducação.  

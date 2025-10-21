@@ -6,6 +6,7 @@ categories: ["Inovação", "Sustentabilidade", "Fatec Tatuí"]
 convidado: "Prof. Jefferson Nedelciu"
 image: "/assets/image/post/2025/10/2025-10-02.jpg"
 public_id: "audio/2025/2025-10-02_ec062df195d35546d96f90edef7033f8"
+description: "O diretor acadêmico da Fatec Tatuí apresenta o projeto Sementeira Solidária, uma iniciativa que une instituições locais em prol da preservação ambiental. O projeto é fruto da parceria entre Fatec Tatuí, Lions Club, Prefeitura de Tatuí e Etec Sales Gomes, envolvendo alunos do curso técnico de Meio Ambiente. A ideia é coletar sementes, tratá-las adequadamente e destiná-las a locais apropriados para plantio, garantindo maior taxa de germinação e resultados efetivos para a arborização da cidade. Além da coleta, o projeto promove capacitações, palestras e atividades educativas práticas em gestão ambiental."
 ---
 
 Na **Fatec Tatuí**, inovação também é sinônimo de **responsabilidade socioambiental**.  

@@ -6,6 +6,7 @@ categories: ["Imposto de Renda 2025", "NAF", "Fatec Tatuí"]
 convidado: "Profª Andrea Pavan Perin"
 image: "/assets/image/post/2025/03/2025-03-19.jpg"
 public_id: "audio/2025/2025-03-20_e44d9ff4e952345d1ec1cc48b29e7d8d"
+description: "Entrevista informativa sobre a Declaração do Imposto de Renda 2024 e a atuação do NAF - Núcleo de Apoio Contábil e Fiscal da Fatec Tatuí. A conversa destaca a importância da orientação gratuita à comunidade prestada pelo NAF durante o período de entrega da declaração. São explicados quem está obrigado a declarar, os principais documentos necessários, as novidades do IRPF 2024 e como estudantes do curso de Gestão Empresarial contribuem com atendimentos à população. A discussão evidencia o papel educativo e social do NAF, promovendo a cidadania fiscal."
 ---
 
 No dia **19 de março de 2025**, o Blog Mundo Tecnológico recebeu a **Profª Andrea Pavan Perin** para uma entrevista informativa e de utilidade pública sobre a **Declaração do Imposto de Renda 2024** e a atuação do **NAF — Núcleo de Apoio Contábil e Fiscal da Fatec Tatuí**.  

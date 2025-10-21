@@ -6,6 +6,7 @@ categories: ["Fatec Tatuí", "Vestibular", "Isenção"]
 convidado: "Jeferson Nedelciu"
 image: "/assets/image/post/2025/09/2025-09-04.jpg"
 public_id: "audio/2025/2025-09-04_ce811bb610b6094ffac91ee090554adb"
+description: "O diretor acadêmico da Fatec Tatuí explica todos os detalhes sobre o vestibular do 1º semestre de 2026 e destaca o processo de isenção e redução da taxa de inscrição, um benefício que amplia o acesso ao ensino superior. São fornecidas informações sobre as inscrições, com taxa de valor reduzido, e quem pode solicitar isenção total ou redução de 50%. Estudantes que fizeram o ensino médio integralmente em escola pública, alunos cursando o 3º ano e candidatos com renda per capita familiar de até um salário mínimo podem solicitar o benefício através de processo simples pelo site."
 ---
 
 Quer estudar na Fatec Tatuí sem pagar taxa de inscrição? Agora é possível! Na Fatec Tatuí, o ensino tecnológico de qualidade anda de mãos dadas com a oportunidade. Em entrevista à Rádio Notícias, o diretor acadêmico professor Jeferson Nedelso explicou todos os detalhes sobre o vestibular do 1º semestre de 2026 e destacou o processo de isenção e redução da taxa de inscrição, um benefício que amplia o acesso ao ensino superior.

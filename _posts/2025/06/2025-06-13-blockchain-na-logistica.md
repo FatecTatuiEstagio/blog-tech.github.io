@@ -6,6 +6,7 @@ categories: ["Blockchain", "Logística"]
 convidado: "Júlia Bueno e Professor Jeferson Nedelciu"
 image: "/assets/image/post/2025/06/2025-06-13.jpg"
 public_id: "audio/2025/2025-06-13_36706ad54d1f550d88710e2d530fc58b"
+description: "Aluna e professor da Fatec Tatuí explicam como a tecnologia blockchain pode revolucionar a logística, garantindo maior controle e rastreamento de dados. A pesquisa explora aplicações do blockchain além das criptomoedas, focando na solução de problemas logísticos. É destacado que muitos problemas na logística atual não se resumem à entrega final, mas a falhas nos processos gerenciais. O blockchain surge como ferramenta capaz de criar um registro imutável e transparente de todas as transações, prevenindo fraudes, garantindo a qualidade dos produtos e agilizando a entrega."
 ---
 
 **Resumo:**  

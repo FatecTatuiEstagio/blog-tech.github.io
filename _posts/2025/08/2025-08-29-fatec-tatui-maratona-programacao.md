@@ -6,6 +6,7 @@ categories: ["Maratona", "Programação", "Desenvolvedores"]
 convidado: "Marlon, Pedro, Luís e Jeferson Nedelciu"
 image: "/assets/image/post/2025/08/2025-08-29-01.jpg"
 public_id: "audio/2025/2025-08-29-01_56ed1804ed785ddf9e24092a8c9060c1"
+description: "O diretor acadêmico e três alunos da Fatec Tatuí compartilham suas experiências na Maratona de Programação, um evento que desafia estudantes a resolver problemas complexos em equipe e contra o tempo. É destacado como a instituição incentiva seus alunos a explorarem diversas atividades além da sala de aula. Os alunos explicam que a Maratona é uma competição de programação para desenvolvedores, com desafios em equipe, que estimula o conhecimento e coloca em prova a lógica de programação. São compartilhados os aprendizados e oportunidades que surgiram com a participação, incluindo contato com empresas e oportunidades de emprego."
 ---
 
 A Rádio Notícias entrevista o diretor acadêmico da Fatec Tatuí, Professor **Jeferson Nedelciu**,  

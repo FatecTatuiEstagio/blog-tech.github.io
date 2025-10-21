@@ -6,6 +6,7 @@ categories: ["InovaCPS", "Clínica", "Vacinas", "Agendamento Online"]
 convidado: "Profª Rosana, da Fatec Tatuí, e alunas de ADS"
 image: "/assets/image/post/2025/07/2025-07-25.jpg"
 public_id: "audio/2025/2025-07-25_a04bbc3c34b508f7d3179625d6c588c3"
+description: "Professora e alunas de Análise e Desenvolvimento de Sistemas compartilham os bastidores do projeto Inovaccine, um sistema de gerenciamento de vacinação que promete revolucionar a forma como lidamos com a saúde preventiva. O sistema permite agendamento online, controle de estoque de vacinas, acesso a informações confiáveis sobre vacinação e emissão de certificados digitais. É explicado como o Inova, assessoria de inovação e empreendedorismo do Centro Paula Souza, capacita os alunos a se tornarem protagonistas de seus projetos através da Escola de Inovadores, culminando em fases de aceleração e desenvolvimento de modelo de negócio viável."
 ---
 
 Na **quarta-feira (23/07)**, a Profª **Rosana**, da Fatec Tatuí, e as alunas de **Análise e Desenvolvimento de Sistemas**, participaram de uma entrevista sobre o **INOVA** e um projeto da instituição que está em fase de aceleração.

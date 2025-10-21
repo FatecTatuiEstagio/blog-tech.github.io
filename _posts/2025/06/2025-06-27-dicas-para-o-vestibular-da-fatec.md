@@ -6,6 +6,7 @@ categories: ["Vestibular", "Fatec Tatuí"]
 convidado: "Prof. Me. Jeferson Nedelciu"
 image: "/assets/image/post/2025/06/2025-06-27.jpg"
 public_id: "audio/2025/2025-06-27_f8fcc6525b4d54bec192779514892a77"
+description: "O diretor acadêmico da Fatec Tatuí oferece dicas para candidatos ao vestibular, abordando desde documentos necessários e vestimenta adequada até o controle da ansiedade e processo de matrícula. São enfatizados pontos cruciais que frequentemente causam problemas, como documentação original obrigatória, material permitido, horário de fechamento dos portões e comportamento durante a prova. A entrevista aborda também a questão da ansiedade e fornece orientações sobre uso de eletrônicos, medicamentos e ida ao banheiro durante a prova. São explicados os procedimentos pós-vestibular, incluindo divulgação do gabarito e convocação para matrícula."
 ---
 
 **Resumo:**  

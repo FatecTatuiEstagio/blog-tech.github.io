@@ -5,6 +5,7 @@ date: 2025-04-10
 categories: ["PID", "Automação Industrial"]
 convidado: "Prof. Me. Onei de Barros Junior"
 image: "/assets/image/post/2025/04/2025-04-10.jpg"
+description: "Professor da Fatec Tatuí aborda o papel essencial dos controladores PID (Proporcional, Integral e Derivativo) na automação industrial. Com linguagem acessível, explica como esses controladores são utilizados em sistemas automatizados para manter variáveis como temperatura, pressão e velocidade dentro de parâmetros ideais. É detalhado como cada componente do controlador contribui para o ajuste preciso do sistema, proporcionando estabilidade e eficiência. A conversa destaca aplicações práticas em ambientes reais de produção e a importância do domínio dessa tecnologia para profissionais da área."
 ---
 
 Nesta entrevista à Rádio Notícias, o Professor Mestre Onei de Barros Junior, docente da Fatec Tatuí, aborda o papel essencial dos controladores PID (Proporcional, Integral e Derivativo) na automação industrial.  
