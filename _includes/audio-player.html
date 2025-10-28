@@ -57,16 +57,24 @@ Otherwise include `data-audio-key` and client-side JS will call the audio API to
 
 <script>
   document.addEventListener("DOMContentLoaded", function () {
-  document.querySelectorAll(".audio-player").forEach(async player => {
+  document.querySelectorAll(".dt-published").forEach(async player => {
     // If there's no data-audio-url but a data-audio-key exists, fetch URL from API
-    const key = player.dataset.audioKey;
-    if (!player.dataset.audioUrl && key) {
+    // Prefer data-audio-key; if missing derive key from the element's datetime (YYYY-MM-DD)
+    const keyFromDataset = player.dataset.audioKey;
+    // player.dateTime may be like "2025-10-10T00:00:00-03:00" — take the part before 'T'
+    const keyFromDate = player.dateTime ? player.dateTime.split('T')[0] : '';    
+    const key = keyFromDataset || keyFromDate;
+    // Example: Audio player raw datetime: 2025-10-10T00:00:00-03:00 -> using key: 2025-10-10    
+    console.log(player.dateTime, key)
+    if (key) {
       try {
         const base = window.__AUDIO_API_BASE__ || 'https://blog-server-0y0k.onrender.com';
+        console.log('Fetch audio URL response for key', base);
         const res = await fetch(`${base}/audio/${encodeURIComponent(key)}`);
+        console.log('Fetch audio URL response for key', key, res);
         if (res.ok) {
           const json = await res.json();
-          player.dataset.audioUrl = json.url;
+          player.dateTime = json.url;
         } else {
           // audio not found; hide player
           player.style.display = 'none';
