@@ -1,11 +1,23 @@
 {% assign audio_date = include.audio_date | default: page.public_id %}
 {% assign audio_data = site.data.cloudinary-urls[audio_date] %}
 
+{%- comment -%}
+Render the audio player. If the build-time `site.data` has the URL, include it in `data-audio-url`.
+Otherwise include `data-audio-key` and client-side JS will call the audio API to resolve the URL at runtime.
+{%- endcomment -%}
+
 {% if audio_data %}
   <div
     class="bg-[#102564] text-white rounded-lg p-4 my-6 audio-player"
     data-audio-url="{{ audio_data.url }}"
     data-title="{{ include.title }}">
+{% else %}
+  <div
+    class="bg-[#102564] text-white rounded-lg p-4 my-6 audio-player"
+    data-audio-key="{{ audio_date }}"
+    data-title="{{ include.title }}"
+    data-audio-url="">
+{% endif %}
     <audio></audio>
 
     <div class="text-tech-white mb-3">
@@ -42,11 +54,31 @@
       </div>
     </div>
   </div>
-{% endif %}
 
 <script>
   document.addEventListener("DOMContentLoaded", function () {
-  document.querySelectorAll(".audio-player").forEach(player => {
+  document.querySelectorAll(".audio-player").forEach(async player => {
+    // If there's no data-audio-url but a data-audio-key exists, fetch URL from API
+    const key = player.dataset.audioKey;
+    if (!player.dataset.audioUrl && key) {
+      try {
+        const base = window.__AUDIO_API_BASE__ || 'https://blog-server-0y0k.onrender.com';
+        const res = await fetch(`${base}/audio/${encodeURIComponent(key)}`);
+        if (res.ok) {
+          const json = await res.json();
+          player.dataset.audioUrl = json.url;
+        } else {
+          // audio not found; hide player
+          player.style.display = 'none';
+          return;
+        }
+      } catch (err) {
+        console.error('Failed to fetch audio url for', key, err);
+        player.style.display = 'none';
+        return;
+      }
+    }
+
     const audio = player.querySelector("audio");
     const playBtn = player.querySelector(".play-btn");
     const muteBtn = player.querySelector(".mute-btn");

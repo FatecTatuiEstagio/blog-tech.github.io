@@ -16,7 +16,7 @@ You are an expert in Jekyll (Static Site Generator), Liquid templating, Tailwind
 ***
 
 ## Estrutura do Site Jekyll (Jekyll Site Structure)
-
+999
 - Usar a estrutura padrão e limpa do Jekyll:
   - **_config.yml**: Arquivo central de configuração e variáveis globais.
   - **_posts/**: Onde ficam os artigos do blog (`AAAA-MM-DD-titulo.md`).
