@@ -2,7 +2,7 @@
 layout: post
 title: "Oficinas de Educação Financeira Familiar"
 date: 2025-11-13
-categories: ["Eventos", "Fatec Tatuí"]
+categories: ["Finanças Pessoais", "Gestão Financeira Familiar", "Empreendedorismo", "Fatec Tatuí"]
 convidado: "Profª Arnaldo Gonçalves"
 image: "/assets/image/post/2025/10/2025-11-13.jpg"
 public_id: "2025-10-25_Oficinas_de_Educação_Financeira_Fam_pnpws4"
