@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Oficinas de Educação Financeira Familiar"
-date: 2025-10-21
+date: 2025-11-13
 categories: ["Eventos", "Protagonismo Feminino", "Fatec Tatuí"]
 convidado: "Profª Rosângela Gonçalves Araújo"
 image: "/assets/image/post/2025/10/2025-11-13.jpg"
