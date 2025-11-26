@@ -3,6 +3,7 @@ layout: post
 title: "Oficinas de Educação Financeira Familiar"
 date: 2025-11-13
 categories: ["Finanças Pessoais", "Gestão Financeira Familiar", "Empreendedorismo", "Fatec Tatuí"]
+description: "A Fatec Tatuí reforça seu compromisso com a comunidade ao lançar as **Oficinas de Educação Financeira Familiar**, conduzidas pelo professor **Arnaldo Gonçalves**, docente da área de Gestão Empresarial. Em entrevista à Rádio Notícias, ele explicou que o projeto surgiu da **necessidade urgente de auxiliar famílias no controle do orçamento doméstico**, especialmente diante do crescente índice de endividamento no Brasil. A proposta é demonstrar, de forma simples e acessível, que pequenas mudanças podem melhorar a qualidade de vida e proporcionar maior tranquilidade financeira."
 convidado: "Profª Arnaldo Gonçalves"
 image: "/assets/image/post/2025/11/2025-11-13.jpg"
 public_id: "2025-10-25_Oficinas_de_Educação_Financeira_Fam_pnpws4"
