@@ -4,7 +4,7 @@ title: "Campanha Novembro Azul na Fatec Tatuí"
 date: 2025-11-06
 categories: ["prevenção", "saúde", "conscientização"]
 convidado: "Profª Daiane Roncátó"
-image: "/assets/image/post/2025/11/2025-11-17.jpg"
+image: "/assets/image/post/2025/11/2025-11-06.jpg"
 public_id: "audio/2025/2025-11-06_90ce6660f11cc3df1cac2156d730f0a6"
 ---
 
