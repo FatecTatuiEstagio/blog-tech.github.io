@@ -1,7 +1,7 @@
 ---
 layout: post 
 title: "A importância do voluntariado e da solidariedade em nossa sociedade" 
-date: 2025-08-29 
+date: 2025-08-30
 categories: ["Solidariedade", "Voluntariado", "Ação Social"]  
 convidado: "Jeferson Nedelciu"
 image: "/assets/image/post/2025/08/2025-08-29-02.jpg"
